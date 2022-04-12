@@ -1,0 +1,18 @@
+task: multi-classification 
+model: LGBMClassifier
+model_arguments: {}
+target_column : target 
+
+dataset_split_proportions: 
+  train: 0.7
+  validation: 0 
+  test: 0.3
+
+cross_validation:
+  run: True 
+  folds_number: 5 
+
+hyperoptimization: 
+  evaluations_number: 5 
+  metric: multiclass_roc_auc_score 
+  metric_decreases_when_optimized: False 

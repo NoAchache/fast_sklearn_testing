@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "fast_sklearn_ml_testing"
+version = "0.1.0"
+description = ""
+authors = ["Noe Achache"]
+
+[tool.poetry.dependencies]
+python = "3.9.*"
+sklearn = "^0.0"
+optuna = "^2.10.0"
+pandas = "^1.4.2"
+matplotlib = "^3.5.1"
+lightgbm = "^3.3.2"
+numpy = "^1.22.3"
+dill = "^0.3.4"
+PyYAML = "^6.0"
+typer = "^0.4.1"
+pydantic = "^1.9.0"
+shap = "^0.4.0"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+pylint = "^2.13.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint.basic]
+max-line-length=120
+max-args = 7
+good-names=["ax", # matplotlib name for an axe
+            "X", # common name for a feature matrice.
+            "X_train",
+            "X_validation",
+            "X_test",
+            "e", # common name for an exception
+
+]
+
+[tool.pylint.messages_control]
+disable = [
+    "too-few-public-methods",
+]
+
+[tool.black]
+experimental-string-processing = true
