@@ -3,7 +3,6 @@ Quickly test the performance of different models on your structured/labelled dat
 - Try different models
 - Cross validate, hyperoptimize and get performance on validation and test sets
 - Different metrics/plots (mix of sklearn and custom metrics/plots) specific to each task (binary-classification, multi-classification, regression) 
-
 - Easily add new models, metrics or plots.
 
 ## Installation
