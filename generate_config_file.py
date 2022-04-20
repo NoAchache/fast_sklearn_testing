@@ -9,7 +9,7 @@ from dill.source import getname
 from pydantic import BaseModel, root_validator, validator
 
 from src.config.models_metrics_plots_per_task import MODELS_METRICS_PLOTS_PER_TASK
-from src.utils.constants import CONFIG_PATH
+from src.utils.constants import CONFIG_YAML_PATH
 
 
 class SimpleField(BaseModel):
@@ -416,7 +416,7 @@ def config_file_generator():
     training_config["cross_validation"] = get_cross_val_dict()
     training_config["hyperoptimization"] = get_hyperopt_dict(training_config["task"])
 
-    with open(CONFIG_PATH, "w") as f:
+    with open(CONFIG_YAML_PATH, "w") as f:
         yaml.dump(training_config, f)
 
 

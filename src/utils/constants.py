@@ -1,3 +1,3 @@
 """ Defines constants """
 
-CONFIG_PATH = "src/config/training_config.yml"
+CONFIG_YAML_PATH = "src/config/training_config.yml"

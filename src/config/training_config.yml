@@ -1,16 +1,16 @@
-task: binary-classification # multi-classification, binary-classification, regression
-model: LGBMClassifier
-model_arguments: {}
-target_column : target # name of the column of the dataset which corresponds to the target
+task:  # multi-classification, binary-classification, regression
+model: # model to use
+model_arguments: # hyperparameters to tune the model
+target_column :  # name of the column of the dataset which corresponds to the target
 
 dataset_split_proportions: # percentage of the dataset that goes into train, validation and test
-  train: 0.7
-  validation: 0 # set to 0 to not use a validation set, e.g. if you have a small amount of data, you may prefer cross-validation.
-  test: 0.3
+  train:
+  validation:  # set to 0 to not use a validation set, e.g. if you have a small amount of data, you may prefer cross-validation.
+  test:
 
 cross_validation:
-  run: False # Whether to cross-validate the test set. Usually used if no validation set is provided
-  folds_number: 5 # Number of cross-validation folds
+  run:  # Whether to cross-validate the test set. Usually used if no validation set is provided
+  folds_number: # Number of cross-validation folds
 
 hyperoptimization: # Hyperoptimization will be run if an optimization dict functions is passed to run_training_pipeline
   evaluations_number: # Number of iterations of the hyperoptimization
