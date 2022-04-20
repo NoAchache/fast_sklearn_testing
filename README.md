@@ -42,7 +42,7 @@ Examples are provided for binary-classification, multi-classification and regres
 There are two ways to do it:
 - With the CLI, running:
 ```bash
-./generate_config_file.py
+poetry run python generate_config_file.py
 ```
 
 - Manually, by directly filling in the file /src/config/training_config.yml
