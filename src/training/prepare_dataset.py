@@ -59,7 +59,7 @@ def get_subsets(
 def split_features_and_target(
     dataset: pd.DataFrame, target_column: str
 ) -> Tuple[pd.DataFrame, pd.Series]:
-    """ Splits the input dataset into a features df and a target series """
+    """Splits the input dataset into a features df and a target series"""
     y_true = dataset[target_column]
     X = dataset.loc[:, dataset.columns != target_column]
     return X, y_true
@@ -74,7 +74,7 @@ def split_dataset(
     Tuple[pd.DataFrame, pd.Series],
     Tuple[pd.DataFrame, pd.Series],
 ]:
-    """ Splits the input dataset into train, validation and test """
+    """Splits the input dataset into train, validation and test"""
     train_set, validation_set, test_set = get_subsets(
         dataset,
         config["dataset_split_proportions"],
