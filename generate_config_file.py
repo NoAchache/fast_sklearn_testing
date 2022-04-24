@@ -8,8 +8,7 @@ import yaml
 from dill.source import getname
 from pydantic import BaseModel, root_validator, validator
 
-from src.config.models_metrics_plots_per_task import \
-    MODELS_METRICS_PLOTS_PER_TASK
+from src.config.models_metrics_plots_per_task import MODELS_METRICS_PLOTS_PER_TASK
 from src.utils.constants import CONFIG_YAML_PATH
 
 
