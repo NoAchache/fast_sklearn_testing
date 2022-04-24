@@ -9,6 +9,7 @@ from src.training.training_steps import TrainingSteps
 from src.utils.constants import CONFIG_YAML_PATH
 from src.utils.utils import load_config, start_experiment
 
+
 # pylint: disable=too-many-locals  # This function requires many locals to run correctly
 def run_training_pipeline(
     dataset_with_targets: pd.DataFrame,
