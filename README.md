@@ -12,15 +12,15 @@ The projects uses Python 3.9.11. You can use [pyenv](https://github.com/pyenv/py
 
 ## Install the dependencies
 
-Install [poetry](https://python-poetry.org/docs/#installation):
-```bash
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python - --version 1.1.13
-```
-
 Install data-science packages (example commands for mac, similar for linux):
 ```bash
 brew install lightgbm
 brew install cmake libomp
+```
+
+Install [poetry](https://python-poetry.org/docs/#installation):
+```bash
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 ```
 
 Install the dependencies:
@@ -59,3 +59,4 @@ Add them to `MODELS_METRICS_PLOTS_PER_TASK` located in `src.config.models_metric
 - Create the plot / metric logic in `src.custom_metrics_and_plots` in either `custom_metrics.py` and 
 `custom_plots.py`.
 - Add them to `MODELS_METRICS_PLOTS_PER_TASK` located in `src.config.models_metrics_plots_per_task.py`
+
