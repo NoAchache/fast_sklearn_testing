@@ -32,11 +32,9 @@ class ShapValuesDisplay:
         try:
             shap_values = shap.TreeExplainer(model).shap_values(X)
             shap.summary_plot(shap_values, X, show=False)
-        except (
-            Exception
-        ) as e:  # pylint: disable=broad-except # we catch Exception (and not a specific exception) as
-            # it is the exception used in the shap libray
-
+        # pylint: disable=broad-except # we catch Exception (and not a specific exception) as it is the
+        # exception used in the shap libray
+        except Exception as e:
             print(
                 f"Cannot compute shap values: {e}"
             )  # Raised if model not supported by the library shap.
