@@ -223,7 +223,9 @@ class TrainingSteps:
 
         # pylint: disable=expression-not-assigned # no assignment needed for the below comprehension lists.
 
-        with open(sub_experiment_dir / "metrics.txt", "w", encoding="utf-8") as metric_file:
+        with open(
+            sub_experiment_dir / "metrics.txt", "w", encoding="utf-8"
+        ) as metric_file:
             [
                 metric_file.write(f"{metric_name}: {score}\n")
                 for metric_name, score in metric_results.items()

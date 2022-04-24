@@ -50,6 +50,7 @@ class RegressorModelWithFeatureImportance(
 ):
     """Sklearn Model used for regression's tasks which is applicable for feature importances"""
 
+
 ModelType = Union[
     ClassifierModel,
     RegressorModel,

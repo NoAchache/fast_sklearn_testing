@@ -44,4 +44,4 @@ disable = [
 ]
 
 [tool.black]
-experimental-string-processing = true
+preview = true
