@@ -26,4 +26,4 @@ jobs:
       run: poetry run black . --check
 
     - name: Pylint
-      run: poetry run pylint --fail-under=10
+      run: poetry run pylint src --fail-under=10
