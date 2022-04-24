@@ -1,9 +1,9 @@
 # Fast Sklearn ML Testing
-Quickly test the performance of different models on your structured/labelled data for classification or regression.
+Quickly test the performance of different models on your structured data for classification or regression.
 - Try different models
 - Cross validate, hyperoptimize and get performance on validation and test sets
 - Different metrics/plots (mix of sklearn and custom metrics/plots) specific to each task (binary-classification, multi-classification, regression) 
-- Easily add new models, metrics or plots.
+- Easily add new models, metrics or plots
 
 ## Installation
 
@@ -39,6 +39,7 @@ Examples are provided for binary-classification, multi-classification and regres
 
 ### Parametrize your training
 There are two ways to do it:
+
 - With the CLI, running:
 ```bash
 poetry run python generate_config_file.py
@@ -53,7 +54,7 @@ located in `src.training.training_pipeline.run_training_pipeline.py`. C.f. /exam
 ## Add new plots / metrics
 
 ### Sklearn plots / metrics
-Add them to `MODELS_METRICS_PLOTS_PER_TASK` located in `src.config.models_metrics_plots_per_task.py`
+Import them from the sklearn lib and add them to `MODELS_METRICS_PLOTS_PER_TASK` located in `src.config.models_metrics_plots_per_task.py`
 
 ### Custom plots / metrics
 - Create the plot / metric logic in `src.custom_metrics_and_plots` in either `custom_metrics.py` and 
