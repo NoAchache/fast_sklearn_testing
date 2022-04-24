@@ -1,6 +1,7 @@
 from sklearn.datasets import load_iris
 
-from examples.optimization_dict_hyperopt import optimization_dict_function_for_lgbm
+from examples.optimization_dict_hyperopt import \
+    optimization_dict_function_for_lgbm
 from src.training.training_pipeline import run_training_pipeline
 
 if __name__ == "__main__":

@@ -45,3 +45,6 @@ disable = [
 
 [tool.black]
 preview = true
+
+[tool.isort]
+profile = "black"
