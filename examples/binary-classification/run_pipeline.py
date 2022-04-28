@@ -9,6 +9,6 @@ if __name__ == "__main__":
 
     run_training_pipeline(
         dataset_with_target,
-        config_path="training_config.yml",
+        config_path="examples/regression/training_config.yml",
         optimization_dict_function=optimization_dict_function_for_lgbm,
     )

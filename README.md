@@ -35,9 +35,19 @@ the pyproject.yaml and remove the import from the project.
 ## Get Started
 
 ### Try an example
-Examples are provided for binary-classification, multi-classification and regression in /examples.
+Examples are provided for binary-classification, multi-classification and regression in the folder examples.
 
-### Parametrize your training
+Run respectively the binary-classification, multi-classification or regression example with the following commands:
+```bash
+PYTHONPATH=. poetry run python examples/binary-classification/run_pipeline.py
+PYTHONPATH=. poetry run python examples/multi-classification/run_pipeline.py
+PYTHONPATH=. poetry run python examples/regression/run_pipeline.py
+```
+
+The results will be stored in examples/{task name}/experiments
+
+
+### Parametrize your custom training
 There are two ways to do it:
 
 - With the CLI, running:
@@ -49,7 +59,7 @@ poetry run python generate_config_file.py
 
 ### Run your pipeline
 Create a script which loads your data in a pandas dataframe and pass it to `run_training_pipeline`
-located in `src.training.training_pipeline.run_training_pipeline.py`. C.f. /examples.
+located in `src.training.training_pipeline.run_training_pipeline.py`. C.f. the folder examples.
 
 ## Add new plots / metrics
 
