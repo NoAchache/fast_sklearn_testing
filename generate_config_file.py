@@ -419,6 +419,8 @@ def config_file_generator():
     with open(CONFIG_YAML_PATH, "w") as f:
         yaml.dump(training_config, f)
 
+    print(f"Sucess! The yaml file was created in {CONFIG_YAML_PATH}")
+
 
 if __name__ == "__main__":
     typer.run(config_file_generator)
