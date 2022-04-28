@@ -59,7 +59,8 @@ poetry run python generate_config_file.py
 
 ### Run your pipeline
 Create a script which loads your data in a pandas dataframe and pass it to `run_training_pipeline`
-located in `src.training.training_pipeline.run_training_pipeline.py`. C.f. the folder examples.
+located in `src.training.training_pipeline.run_training_pipeline.py`. The yaml created in the previous step is used by 
+default. C.f. the folder examples.
 
 ## Add new plots / metrics
 
