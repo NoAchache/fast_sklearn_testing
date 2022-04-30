@@ -1,4 +1,4 @@
-# Fast Sklearn ML Testing
+# Fast Sklearn Testing
 Quickly test the performance of different models on your structured data for classification or regression.
 - Try different models
 - Cross validate, hyperoptimize and get performance on validation and test sets
