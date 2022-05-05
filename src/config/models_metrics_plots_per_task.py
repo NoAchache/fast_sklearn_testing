@@ -27,47 +27,45 @@ from src.custom_metrics_and_plots.custom_plots import (
     ShapValuesDisplay,
 )
 
-MODELS_METRICS_PLOTS_PER_TASK = (
-    {  # For more metrics: https://scikit-learn.org/stable/modules/model_evaluation.html
-        "regression": {
-            "models": [
-                LGBMRegressor,
-                RandomForestRegressor,
-                LinearRegression,
-                LogisticRegression,
-            ],
-            "prediction_method": "predict",
-            "metrics": [r2_score, mean_squared_error, mean_absolute_error, rmse],
-            "plots": [
-                FeaturesImportanceDisplay,
-                ShapValuesDisplay,
-                PredictionsAgainstGroundTruth,
-            ],
-        },
-        "binary-classification": {
-            "models": [LGBMClassifier, RandomForestClassifier, LogisticRegression],
-            "prediction_method": "predict_proba",
-            "metrics": [
-                roc_auc_score,
-                max_f1_from_precision_recall_curve,
-            ],
-            "plots": [
-                RocCurveDisplay,
-                PrecisionRecallDisplay,
-                ConfusionMatrixFromBestF1Display,
-                FeaturesImportanceDisplay,
-                ShapValuesDisplay,
-            ],
-        },
-        "multi-classification": {
-            "models": [LGBMClassifier, RandomForestClassifier, LogisticRegression],
-            "prediction_method": "predict_proba",
-            "metrics": [multiclass_roc_auc_score],
-            "plots": [
-                ConfusionMatrixMulticlassDisplay,
-                FeaturesImportanceDisplay,
-                ShapValuesDisplay,
-            ],
-        },
-    }
-)
+MODELS_METRICS_PLOTS_PER_TASK = {  # For more metrics, check: https://scikit-learn.org/stable/modules/model_evaluation.html
+    "regression": {
+        "models": [
+            LGBMRegressor,
+            RandomForestRegressor,
+            LinearRegression,
+            LogisticRegression,
+        ],
+        "prediction_method": "predict",
+        "metrics": [r2_score, mean_squared_error, mean_absolute_error, rmse],
+        "plots": [
+            FeaturesImportanceDisplay,
+            ShapValuesDisplay,
+            PredictionsAgainstGroundTruth,
+        ],
+    },
+    "binary-classification": {
+        "models": [LGBMClassifier, RandomForestClassifier, LogisticRegression],
+        "prediction_method": "predict_proba",
+        "metrics": [
+            roc_auc_score,
+            max_f1_from_precision_recall_curve,
+        ],
+        "plots": [
+            RocCurveDisplay,
+            PrecisionRecallDisplay,
+            ConfusionMatrixFromBestF1Display,
+            FeaturesImportanceDisplay,
+            ShapValuesDisplay,
+        ],
+    },
+    "multi-classification": {
+        "models": [LGBMClassifier, RandomForestClassifier, LogisticRegression],
+        "prediction_method": "predict_proba",
+        "metrics": [multiclass_roc_auc_score],
+        "plots": [
+            ConfusionMatrixMulticlassDisplay,
+            FeaturesImportanceDisplay,
+            ShapValuesDisplay,
+        ],
+    },
+}
